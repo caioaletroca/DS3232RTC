@@ -96,6 +96,17 @@ void setup() {
 }
 ```
 
+### begin(int sda, int scl)
+##### Description
+Initializes the I2C bus with another pins. For use with non-AVR architectures where the user has instantiated a DS3232RTC object and specified no initialization in the constructor (see above).
+##### Syntax
+`begin(int sda, int scl);`
+##### Parameters
+**sda:** The chip select pin.
+**scl:** The chip reset pin.
+##### Returns
+None.
+
 ## Functions for setting and reading the time
 ### get(void)
 ##### Description
