@@ -56,6 +56,7 @@ class DS3232RTC
     public:
         DS3232RTC(bool initI2C = true);
         void begin();
+        void begin(int sda, int scl);
         static time_t get();       // static needed to work with setSyncProvider() in the Time library
         byte set(time_t t);
         static byte read(tmElements_t &tm);

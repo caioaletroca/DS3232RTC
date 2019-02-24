@@ -125,6 +125,12 @@ void DS3232RTC::begin()
     i2cBegin();
 }
 
+// Initialize the I2C bus with specifics pins.
+void DS3232RTC::begin(int sda, int scl)
+{
+    i2cBegin(sda, scl);
+}
+
 // Read the current time from the RTC and return it as a time_t
 // value. Returns a zero value if an I2C error occurred (e.g. RTC
 // not present).
